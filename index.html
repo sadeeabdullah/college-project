@@ -1,31 +1,31 @@
 
 <!DOCTYPE html> 
-<html lang="en"> 
+<html  lang="en"> 
 	<head> 
-	<title>Tech Spot</title>
+	<title>Savvytech | Home</title>
     <!-- cdn for tailwindcss -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- cdn for daisyui -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.3/dist/full.min.css" rel="stylesheet" type="text/css" />
 </head> 
-<body class="bg-[#ebecf0]  mx-auto "> 
+<body class="bg-[#ebecf0]  mx-auto  "> 
     
     <header class="sticky top-0 w-full bg-[#FEFBF6] z-50">
 
        <!-- navbar start here -->
-        <div class=" rounded-b-sm drop-shadow-2xl  flex justify-between mx-auto max-w-7xl py-1  mx-auto items-center">
+        <div class=" rounded-b-sm drop-shadow-sm flex justify-between mx-auto max-w-7xl py-1  mx-auto items-center">
             <div class=" flex justify-between items-center">
               <div class="dropdown">
                 <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                 </div>
-                <ul tabindex="0" class="menu menu-sm  dropdown-content mt-3 z-[1] p-2 shadow bg-[#739072] rounded-box w-52 text-lg">
+                <ul tabindex="0" class="menu menu-sm  dropdown-content mt-3 z-[1] p-2 shadow bg-[#8CB9BD] text-[#FEFBF6] rounded-box w-52 text-lg">
                   <li><a>Home</a></li>
                 <li><a>Products</a></li>
                 <li>
                   <details>
                     <summary>About Us</summary>
-                    <ul class="p-2 bg-[#739072] hover:bg-[#4F6F52]">
+                    <ul class="p-2 bg-[#8CB9BD] text-[#FEFBF6]">
                       <li><a>Contact Us</a></li>
                       <li><a>Location</a></li>
                     </ul>
@@ -36,13 +36,13 @@
               <img class="h-10" src="images/logo.webp" alt="">
             </div>
             <div class=" hidden lg:flex">
-              <ul class="menu menu-horizontal px-1 text-lg">
+              <ul class="menu menu-horizontal px-1 text-[#8CB9BD] text-lg">
                 <li><a>Home</a></li>
                 <li><a>Products</a></li>
                 <li>
                   <details>
                     <summary>About Us</summary>
-                    <ul class="p-2 bg-[#739072] hover:bg-[#4F6F52]">
+                    <ul class="p-2 bg-[#8CB9BD] text-[#FEFBF6] ">
                       <li><a>Contact Us</a></li>
                       <li><a>Location</a></li>
                     </ul>
@@ -60,24 +60,24 @@
     <!-- banner start here -->
 	<div class="flex justify-between  lg:items-center lg:py-10 py-16">
     <!-- div for banner text -->
-    <div>
-      <h2 class="text-5xl mb-4  text-[#ECB159]  font-bold">Unmatched Tech </br> Selection.Find Everything </br> You Need at <span class="text-[#8CB9BD]">SavyTech</span>.</h2>
+    <div class="">
+      <h2 class="text-5xl mb-4  text-[#ECB159]   font-bold">Unmatched Tech </br> Selection.Find Everything </br> You Need at <span class="text-[#8CB9BD]">SavyTech</span>.</h2>
       <p class="text-xl">From smartphones to smart homes, explore our vast tech haven.</p>
-      <button class="text-xl bg-[#ECB159] p-1 px-2 rounded-sm mt-2 drop-shadow-2xl hover:shadow-inner hover:shadow-2xl hover:text-white  shadow-[#8CB9BD] text-[#B67352]">Shop Now</button>
+      <button class="text-lg font-md bg-[#8CB9BD] shadow-sm shadow-[#8CB9BD] p-1 px-2 rounded-sm mt-2  hover:shadow-lg hover:text-white duration-500  hover:shadow-[#8CB9BD] text-[#2f2e43] hover:scale-12 hover:translate-x-2 hover:skew-x-2 ">Shop Now</button>
     </div>
 
     <!-- div for banner svg -->
     <div>
-      <img class="h-[400px] lg:block hidden shadow-b-2xl" src="images/banner.svg" alt="">
+      <img class="h-[400px] lg:block hidden drop-shadow-xl " src="images/banner.svg" alt="">
     </div>
 
   </div>
 <!-- banner end here -->
 
 <!-- some partner div start here -->
-<div class="mt-12  ">
+<div class="my-16 ">
   <h1 class=" flex justify-center text-4xl font-semibold">Our Partners</h1>
-    <div class="flex justify-evenly mt-4">
+    <div class="flex justify-evenly mt-8">
       <img class="h-16" src="images/partners/partner (1).webp" alt="">
       <img class="h-16" src="images/partners/partner (4).webp" alt="">
       <img class="h-16" src="images/partners/partner (2).webp" alt="">
@@ -100,12 +100,12 @@
 <!-- testimonial end here -->
 
 <!-- chat option start here -->
-<div class="sticky  bottom-16 pr-16 flex justify-end animate-bounce">
-  <div class="bg-[#2f2e43] text-white h-fit p-1 rounded-full">send message to us</div>
-  <div class=" h-16 w-16 bg-[#8CB9BD]  flex items-center justify-center rounded-lg">
-   <img class="h-12 w-12" src="images/chat.png" alt="">
-   
-  </div>
+<div class="sticky   bottom-16 pr-16 flex justify-end animate-bounce">
+  <!-- <div class="bg-[#2f2e43] text-[#FEFBF6] h-fit py-1 px-2 rounded-full">send message to us</div> -->
+    <div class=" h-14 w-14 bg-[#8CB9BD]  shadow-lg shadow-[#8CB9BD]  flex items-center justify-center rounded-full tooltip  tooltip-left" data-tip="send us message">
+      <img class="h-8 w-8" src="images/chat.png" alt="">
+      
+     </div>
 </div>
 
 
