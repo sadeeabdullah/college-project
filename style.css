@@ -1,0 +1,41 @@
+
+
+/* for product cards button */
+
+.addToCartBtn{
+    padding:14px 18px 14px 18px;
+    font-size: 13px;
+    color: white;
+    border: 0;
+    border-radius: 4px;
+    background-color: #f0b156 ;
+    font-weight: 600;
+}
+.addToCartBtn:hover{
+    box-shadow: 0 10px 15px -3px #f0b156, 0 4px 6px -2px #f0b156;
+    background-color: #e2e3e4;
+    color: #f0b156;
+    transition: box-shadow 0.3s ease;
+    scale: 1.01;
+    transition: ease-out;
+    transition-duration: 500ms;
+}
+.buyBtn{
+    padding:14px 18px 14px 18px;
+    font-size: 13px;
+    color: white;
+    border: 0;
+    border-radius: 4px;
+    background-color: #8eb8be ;
+    font-weight: 600;
+}
+.buyBtn:hover{
+    box-shadow: 0 10px 15px -3px #8eb8be, 0 4px 6px -2px #8eb8be;
+    background-color: #e2e3e4;
+    color: #8eb8be;
+    transition: ease-out;
+    transition-duration: 500ms;
+    scale: 1.01;
+    font-size:  14px; ;
+
+}
