@@ -57,8 +57,18 @@
 }
 .google-map iframe{
     height: 70vh;
-    width: 50%;
+    width: 100%;
     left: 0;
     top: 0;
    
+}
+
+/* css for location section */
+.location-section{
+    background-color: #fff;
+}
+.location-text{
+    padding: 20px;
+    text-align: left;
+    font-size: 20px;
 }
