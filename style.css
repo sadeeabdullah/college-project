@@ -1,5 +1,6 @@
 
 
+
 /* for product cards button */
 
 .addToCartBtn{
@@ -38,4 +39,16 @@
     scale: 1.01;
     font-size:  14px; ;
 
+}
+
+/* google map */
+.google-map{
+    position: relative;
+}
+.google-map iframe{
+    height: 70vh;
+    width: 50%;
+    left: 0;
+    top: 0;
+   
 }
