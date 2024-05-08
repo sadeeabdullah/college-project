@@ -1,3 +1,8 @@
+/* for scroll behaviour */
+html{
+    scroll-behavior: smooth;
+}
+
 /* section css*/
 
 .section-container{
