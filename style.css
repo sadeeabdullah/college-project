@@ -3,6 +3,29 @@ html{
     scroll-behavior: smooth;
 }
 
+/* navbar */
+
+/* for menu drop down */
+.menu-dropdown{
+    position: relative;
+    display: inline-block;
+}
+.menu-dropdown-content{
+    display: none;
+    padding: 4px;
+    display: absolute;
+    z-index: 10;
+}
+.menu-dropdown:hover .menu-dropdown-content{
+    display: inline-block;
+}
+.avatar{
+    height: 45px;
+}
+.sign-login-btn{
+    display: flex;
+}
+
 /* section css*/
 
 .section-container{
