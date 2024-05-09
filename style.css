@@ -22,10 +22,21 @@ html{
 .avatar{
     height: 45px;
 }
-.sign-login-btn{
+.sign-login-btn-container{
     display: flex;
+    align-items: center;
+    gap: 5px;
 }
-
+.sign-in-btn{
+    border: 2px solid #8eb8be;
+    padding: 6px 20px 6px 20px;
+    border-radius: 7px;
+}
+.sign-up-btn{
+    border: 2px solid #f0b156;
+    padding: 6px 20px 6px 20px;
+    border-radius: 7px;
+}
 /* section css*/
 
 .section-container{
