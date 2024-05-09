@@ -18,6 +18,7 @@ html{
 }
 .menu-dropdown:hover .menu-dropdown-content{
     display: inline-block;
+    
 }
 .avatar{
     height: 45px;
