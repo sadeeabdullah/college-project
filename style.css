@@ -6,17 +6,17 @@ html{
 /* navbar */
 
 /* for menu drop down */
-.menu-dropdown{
+.menu-sitebar{
     position: relative;
     display: inline-block;
 }
-.menu-dropdown-content{
+.menu-sitebar-content{
     display: none;
     padding: 4px;
     display: absolute;
     z-index: 10;
 }
-.menu-dropdown:hover .menu-dropdown-content{
+.menu-sitebar:hover .menu-sitebar-content{
     display: inline-block;
     
 }
@@ -48,6 +48,12 @@ html{
     font-size: 38px;
     font-weight: 500;
     margin-bottom: 30px;
+}
+
+/* popular product card section */
+.popular-product-card-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 }
 
 
@@ -111,4 +117,23 @@ html{
     padding: 20px;
     text-align: left;
     font-size: 20px;
+}
+
+
+/* newsletter css */
+.newsletter-section{
+    margin-top: 150px;
+    height: 300px;
+    display: flex;
+    background-color: #fbfdfe;
+    position: relative;
+}
+
+.newsletter-section img{
+    height: 300px;
+    scale:1.5 ;
+    top: -100px;
+    z-index: 1;
+    position: absolute;
+    padding-left: scale(100%-200px);
 }
