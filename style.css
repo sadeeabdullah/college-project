@@ -121,19 +121,56 @@ html{
 
 
 /* newsletter css */
+
 .newsletter-section{
-    margin-top: 150px;
+    margin-top: 250px;
     height: 300px;
     display: flex;
+    gap: 200px;
     background-color: #fbfdfe;
-    position: relative;
+    width: 100%;
 }
 
 .newsletter-section img{
     height: 300px;
     scale:1.5 ;
     top: -100px;
+    left: 100px;
     z-index: 1;
-    position: absolute;
-    padding-left: scale(100%-200px);
+    position: relative;
+   
+}
+
+.newsletter-text-container{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 30px 20px 0px 20px;
+    width: 50%;
+}
+
+.newsletter-heading{
+    color: #6c4ba4;
+    font-weight: 600;
+    font-size: 35px;
+    
+}
+
+/* for input field and input button */
+.input-container{
+    display: flex;
+    border-radius: 70px;
+}
+
+.input-email{
+    background-color: #e2e3e4;
+    width: 50%;
+    padding-left: 15px;
+     border-radius: 4px 0px 0px 4px;
+}
+.input-email-btn{
+    background-color: #ad203a;
+    padding: 6px 15px 6px 15px;
+    color: white;
+    border-radius: 0px 4px 4px 0px;
 }
