@@ -174,3 +174,17 @@ html{
     color: white;
     border-radius: 0px 4px 4px 0px;
 }
+
+/* contact us section css */
+
+.contact-container{
+    background-color: red;
+}
+
+.contact-title{
+    text-align: center;
+}
+
+.contact-title h1{
+    font-weight: 500;
+}
