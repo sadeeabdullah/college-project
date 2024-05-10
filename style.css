@@ -1,7 +1,9 @@
 /* for scroll behaviour */
-html{
+body{
     scroll-behavior: smooth;
+    font-family: "Reddit Sans", sans-serif;
 }
+
 
 /* navbar */
 
@@ -170,21 +172,16 @@ html{
 }
 .input-email-btn{
     background-color: #ad203a;
-    padding: 6px 15px 6px 15px;
+    padding: 14px 18px 14px 18px;
     color: white;
+    font-size: 13px;
+    font-weight: 600;
     border-radius: 0px 4px 4px 0px;
 }
 
 /* contact us section css */
 
-.contact-container{
-    background-color: red;
+.section-title p{
+    font-size: 20px;
 }
 
-.contact-title{
-    text-align: center;
-}
-
-.contact-title h1{
-    font-weight: 500;
-}
