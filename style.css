@@ -252,6 +252,7 @@ footer{
 }
 
 .social-link-container{
+    width: 200px;
     display: flex;
     justify-content: space-between;
     gap: 10px;
@@ -259,3 +260,5 @@ footer{
 .social-link-container img{
     height: 30px;
 }
+
+
