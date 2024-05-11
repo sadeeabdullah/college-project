@@ -248,4 +248,14 @@ footer{
 .footer-text-column h1{
     font-size: 20px;
     color: #f0b156;
+    margin-bottom: 10px;
+}
+
+.social-link-container{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+.social-link-container img{
+    height: 30px;
 }
