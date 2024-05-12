@@ -260,5 +260,12 @@ footer{
 .social-link-container img{
     height: 30px;
 }
+.social-link-container img:hover{
+    background-color: #f0b156;
+    height: 30px;
+    width: 30px;
+    border-radius: 500px;
+    transition: 0.3s;
+}
 
 
