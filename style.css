@@ -252,7 +252,7 @@ footer{
 }
 
 .social-link-container{
-    width: 200px;
+    width: 100px;
     display: flex;
     justify-content: space-between;
     gap: 10px;
