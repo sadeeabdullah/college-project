@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Savvytech | Home</title>
+  <link rel="icon" type="image/x-icon" href="images/fav.png">
+  <!-- cdn for tailwindcss -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- cdn for daisyui -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.3/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="style.css">
+
+  <!-- for reddit font -->
+  <<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-[#ebecf0] ">
+
+<header class="sticky top-0 w-full bg-[#2f2e43] z-50">
+
+    <!-- navbar start here -->
+<div class=" rounded-b-sm drop-shadow-sm flex  justify-between mx-auto max-w-7xl py-1 h-[80px]  mx-auto items-center">
+<div class=" flex justify-between items-center">
+<div class="dropdown">
+<div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+  stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+  </svg>
+</div>
+  <ul tabindex="0"class="menu menu-sm  dropdown-content mt-3 z-[1] p-2 shadow bg-[#8CB9BD] text-[#e2e3e4] rounded-box w-52 text-lg">
+    <li><a href="#banner">Home</a></li>
+            <li><a href="#product">Products</a></li>
+            <li>
+              <details>
+                <summary>About Us</summary>
+                <ul class="p-2 bg-[#2f2e43] text-[#e2e3e4]">
+                  <li><a href="#contact">Contact Us</a></li>
+                  <li><a href="#location">Location</a></li>
+                </ul>
+              </details>
+            </li>
+          </ul>
+        </div>
+        <img class="h-10" src="images/logo.webp" alt="">
+      </div>
+      <div class=" hidden lg:flex ">
+        <ul class="menu menu-horizontal px-1  lg:items-center text-[#e2e3e4] text-lg">
+          <li><a href="#banner">Home</a></li>
+          <li><a href="#product">Products</a></li>
+          <li>
+            <details>
+              <summary>About Us</summary>
+              <ul class="p-2 bg-[#2f2e43] hover:bg-gray-700 text-[#e2e3e4] ">
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#location">Location</a></li>
+              </ul>
+            </details>
+          </li>
+          <li>
+            <div class="menu-sitebar">
+              <img class="avatar" src="images/avatar.png" alt="">
+              <div class="menu-sitebar-content">
+                <ul class="sign-login-btn-container">
+                  <li><a href=""><button class="sign-in-btn">Sign In</button></a></li>
+                  <li><a href=""><button class="sign-up-btn">Sign up</button></a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+  </header>
+  <!-- navbar end here -->
+
+
+  <!-- full body -->
+  <div class="max-w-7xl mx-auto lg:px-0 px-10 ">
+    <!-- Products cards here -->
+
+   <div id="product-list">
+
+   </div>
+
+    <!-- floating chat option start here -->
+
+    <div class="sticky     bottom-16 pr-16 flex justify-end animate-bounce">
+      
+      <div
+        class=" h-14 w-14 bg-[#8CB9BD]  shadow-lg shadow-[#8CB9BD]  flex items-center justify-center rounded-full tooltip  tooltip-left"
+        data-tip="send us message">
+        <img class="h-8   w-8" src="images/chat.png" alt="">
+
+      </div>
+    </div>
+
+    <!-- floating chat option end here -->
+  </div>
+  <!-- full body end here -->
+    <!-- footer start here -->
+    <footer>
+      <div class="max-w-7xl mx-auto">
+        <div class="flex justify-between flex-col lg:flex-row max-auto lg:pl-0 pl-8">
+          <!-- div for logo -->
+        <div class="footer-logo">
+          <img  src="images/logo.webp" alt="">
+        </div>
+        <!-- customer service column -->
+        <div class="footer-text-column">
+          <h1>Customer Service</h1>
+          <p>Track your order</p>
+          <p>Contact us</p>
+          <p>Delivery & order</p>
+          <p>Return & exchange</p>
+          <p>Term & condition</p>
+          <p>Privacy & policy</p>
+        </div>
+        <div class="footer-text-column">
+          <h1>Company</h1>
+          <p>About us</p>
+          <p>Store location</p>
+          <p>Careers</p>
+        </div>
+        <div class="footer-text-column">
+          <h1>Follow us</h1>
+          <div class="social-link-container">
+            <img src="images/social link icon/facebook.png" alt="">
+            <img src="images/social link icon/twitter.png" alt="">
+            <img src="images/social link icon/youtube.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div></div>
+      </div>
+    </footer>
+    <!-- footer end here -->
+
+    <!-- script here -->
+     <script src="index.js"></script>
+</body>
+
+</html>
