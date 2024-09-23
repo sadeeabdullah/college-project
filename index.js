@@ -2,6 +2,9 @@
 let p = [];
 const fetchPromises = [];
 
+// Show loader
+document.getElementById('loader').removeAttribute('style')
+
 const productsCount = 20;
 for (let i = 1; i <= productsCount; i++) {
     const fetchPromise = fetch(`https://fakestoreapi.com/products/${i}`, {
@@ -21,9 +24,10 @@ for (let i = 1; i <= productsCount; i++) {
 
 // Wait for all fetch requests to complete
 Promise.all(fetchPromises).then(() => {
-    p.forEach(element => {
-        console.log(element.image); // Log each product
-    });
+    // Hide loader after all data is fetched
+    document.getElementById('loader').style.display = 'none';
+
+    displayProducts(p); // Call the function to render the product cards
 });
 
 // Adding a cart variable so that I can add items to the cart later
@@ -58,12 +62,6 @@ function displayProducts(products) {
         productsList.appendChild(card);
     });
 }
-
-
-// Call the displayProducts function once all data is fetched
-Promise.all(fetchPromises).then(() => {
-    displayProducts(p); // Call the function to render the product cards
-});
 
 // Function to add items to the cart
 function addToCart(productId) {

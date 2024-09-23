@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="style.css">
 
   <!-- for reddit font -->
-  <<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap" rel="stylesheet">
 </head>
@@ -81,15 +81,22 @@
 
   <!-- full body -->
   <div class="max-w-7xl mx-auto lg:px-0 px-10 ">
+
+    
     <!-- Products cards here -->
 
    <div id="product-list"  class="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 mx-auto gap-4 mt-12">
-
+    <!-- Loader here -->
+    <div id="loader" class="loader h-[80vh] w-[60vw]  flex items-center  justify-center" style="display: none;">
+      <div class="loading loading-spinner text-primary w-[4vw] h-[4vw]"></div>
+  </div>
+  
+    <div id="product-list"></div>
    </div>
 
     <!-- floating chat option start here -->
 
-    <div class="sticky     bottom-16 pr-16 flex justify-end animate-bounce">
+    <div class="sticky bottom-16 pr-16 flex justify-end animate-bounce">
       
       <div
         class=" h-14 w-14 bg-[#8CB9BD]  shadow-lg shadow-[#8CB9BD]  flex items-center justify-center rounded-full tooltip  tooltip-left"
