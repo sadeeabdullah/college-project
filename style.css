@@ -271,4 +271,11 @@ footer{
     transition: 0.3s;
 }
 
-
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+    }
+.ani{
+    animation: fadeOut 2s forwards;
+    animation-timeline: scroll();
+}

@@ -16,7 +16,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap" rel="stylesheet">
 </head>
 
-<body class="bg-[#ebecf0] ">
+<body class="bg-[#ebecf0]  " >
 
 <header class="sticky top-0 w-full bg-[#2f2e43] z-50">
 
@@ -129,7 +129,7 @@
 
       <!-- here use a button to show the products page -->
 
-      <div class="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 mx-auto gap-4 mt-12 font-sans" id="feature-list">
+      <div class="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 mx-auto gap-4 mt-12 font-sans ani" id="feature-list">
       
      
 
@@ -285,7 +285,121 @@
     <!-- footer end here -->
 
     <!-- script here -->
-     <script src="index.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+          // Initialize variables
+          let p = [];
+          const fetchPromises = [];
+          const productsCount = 20;
+  
+          // // Show loader
+          // const loader = document.getElementById('loader');
+          // loader.style.display = 'block'; // Show loader
+  
+          // Fetch product data from the API
+          for (let i = 1; i <= productsCount; i++) {
+              const fetchPromise = fetch(`https://fakestoreapi.com/products/${i}`, {
+                  method: 'GET',
+                  headers: {
+                      'Content-Type': 'application/json'
+                  }
+              })
+              .then(res => res.json())
+              .then(data => {
+                  p.push(data);
+              })
+              .catch(error => console.error('Error fetching product:', error)); // Optional error handling
+  
+              fetchPromises.push(fetchPromise); // Add the promise to the array
+          }
+  
+          // Wait for all fetch requests to complete
+          Promise.all(fetchPromises).then(() => {
+              // Hide loader after all data is fetched
+              // loader.style.display = 'none';
+  
+              displayProducts(p); // Call the function to render the product cards
+              displayProductsOnHome(p.slice(1, 5)); // Display featured products
+          });
+  
+          // Adding a cart variable for later use
+          let cart = [];
+  
+          // Function to render product cards
+          function displayProducts(products) {
+              const productsList = document.getElementById('feature-list');
+              productsList.innerHTML = '';
+  
+              products.forEach(product => {
+                  const card = document.createElement('div');
+                  card.classList.add('card');
+                  
+                  card.innerHTML = `
+                      <div class="p-3 hover:scale-[1.01] duration-500 hover:shadow-lg mx-auto rounded-md border-gray-300 border bg-[#e2e3e4] w-[300px] shadow-md ">
+                          <div class="overflow-hidden ">
+                          <img class="rounded-t-sm w-full duration-500 object-cover hover:scale-105 h-[250px]" src="${product.image}" alt="${product.title}">
+                          </div>
+                          <div class="flex flex-col gap-3 justify-between mt-2">
+                              <div>
+                                  <h1 class="text-md font-semibold">${product.title.length < 14 
+                                      ?  product.title
+                                      : product.title.slice(0, 25) + '...'}</h1>
+                                  <p class="font-normal text-sm">Price: <span>${product.price} <span class="font-thin">$</span></span></p>
+                              </div>
+                              <div class="flex justify-between">
+                                  <button class="addToCartBtn" onclick="addToCart(${product.id})">Add to Cart</button>
+                                  <button class="buyBtn">Buy Now</button>
+                              </div>
+                          </div>
+                      </div>`;
+                  
+                  productsList.appendChild(card);
+              });
+          }
+  
+          // Function to display featured products on home
+          function displayProductsOnHome(products) {
+              const featureList = document.getElementById('feature-list');
+              featureList.innerHTML = '';
+  
+              products.forEach(product => {
+                  const card = document.createElement('div');
+                  card.classList.add('card');
+                  
+                  card.innerHTML = `
+                      <div class="p-3 hover:scale-[1.01] duration-500 hover:shadow-lg mx-auto rounded-md border-gray-300 border bg-[#e2e3e4] w-[300px] shadow-md ">
+                          <div class="overflow-hidden ">
+                          <img class="rounded-t-sm w-full duration-500 object-cover hover:scale-105 h-[250px]" src="${product.image}" alt="${product.title}">
+                          </div>
+                          <div class="flex flex-col gap-3 justify-between mt-2">
+                              <div>
+                                  <h1 class="text-md font-semibold">${product.title.length < 14 
+                                      ?  product.title
+                                      : product.title.slice(0, 25) + '...'}</h1>
+                                  <p class="font-normal text-sm">Price: <span>${product.price} <span class="font-thin">$</span></span></p>
+                              </div>
+                              <div class="flex justify-between">
+                                  <button class="addToCartBtn" onclick="addToCart(${product.id})">Add to Cart</button>
+                                  <button class="buyBtn">Buy Now</button>
+                              </div>
+                          </div>
+                      </div>`;
+                  
+                  featureList.appendChild(card);
+              });
+          }
+  
+          // Function to add items to the cart
+          function addToCart(productId) {
+              const product = p.find(item => item.id === productId);
+              if (product) {
+                  cart.push(product);
+                  alert(`${product.title} added to cart!`);
+              }
+          }
+      });
+  </script>
+  
 </body>
 
 </html>
