@@ -17,9 +17,12 @@ body{
     padding: 4px;
     display: absolute;
     z-index: 10;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 .menu-sitebar:hover .menu-sitebar-content{
     display: inline-block;
+    
+    
     
 }
 .avatar{
@@ -198,7 +201,7 @@ body{
 .contact-card{
     background-color: #fff;
     padding: 0px 40px 30px 40px;
-    box-shadow:0px 4px 6px 4px rgb(224, 219, 219) ;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     text-align: center;
     width: calc((100% - 400px)/3);
     border-radius: 7px;

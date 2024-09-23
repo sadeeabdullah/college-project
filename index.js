@@ -22,7 +22,7 @@ for (let i = 1; i <= productsCount; i++) {
 // Wait for all fetch requests to complete
 Promise.all(fetchPromises).then(() => {
     p.forEach(element => {
-        console.log(element); // Log each product
+        console.log(element.image); // Log each product
     });
 });
 
@@ -39,30 +39,26 @@ function displayProducts(products) {
         card.classList.add('card');
         
         card.innerHTML = `
-            <div
-          class="p-3 hover:scale-[1.01] duration-500 hover:shadow-lg   mx-auto  rounded-md border-gray-300 border bg-[#e2e3e4] w-[300px] shadow-md">
-          <img class="rounded-t-sm w-full duration-500 object-cover hover:scale-105 h-[250px]" src="images/products image/iphoneX.jpg" alt="">
-          <div class="flex flex-col  gap-3 justify-between mt-2">
-            <div>
-              <h1 class="text-lg font-semibold">dash keyboard</h1>
-              <p class="font-semibold">price: <span class="">500 <span class="font-bold text-xl">$</span></span></p>
-            </div>
-            <!-- add to cart or buy now button -->
-            <div class="flex justify-between">
-              <button
-                class="addToCartBtn">Add
-                to Cart</button>
-              <button
-                class="buyBtn"
-                id="check">Buy Now</button>
-            </div>
-          </div>
-
-        </div>`;
+            <div class="p-3 hover:scale-[1.01] duration-500 hover:shadow-lg mx-auto rounded-md border-gray-300 border bg-[#e2e3e4] w-[300px] shadow-md">
+                <img class="rounded-t-sm w-full duration-500 object-cover hover:scale-105 h-[250px]" src="${product.image}" alt="${product.title}">
+                <div class="flex flex-col gap-3 justify-between mt-2">
+                    <div>
+                        <h1 class="text-lg font-semibold">${product.title.length > 14 
+                            ? product.title.slice(0, 14) + '...' 
+                            : product.title}</h1>
+                        <p class="font-semibold">Price: <span>${product.price} <span class="font-bold text-xl">$</span></span></p>
+                    </div>
+                    <div class="flex justify-between">
+                        <button class="addToCartBtn" onclick="addToCart(${product.id})">Add to Cart</button>
+                        <button class="buyBtn">Buy Now</button>
+                    </div>
+                </div>
+            </div>`;
         
         productsList.appendChild(card);
     });
 }
+
 
 // Call the displayProducts function once all data is fetched
 Promise.all(fetchPromises).then(() => {
